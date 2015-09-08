@@ -7,6 +7,8 @@
 
 # -----------------------------------------------------------------------------
 
+# Module 1: Importing data
+
 #installed.packages(lib.loc=NULL)
 
 #Installing required packages:

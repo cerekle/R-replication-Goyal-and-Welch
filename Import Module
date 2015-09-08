@@ -1,0 +1,96 @@
+
+#R for empirical finance, modules:
+#1)Importing data
+#2)Calculating variables for the project
+#3)Statistical tests
+#4)Plotting tables and graphs 
+
+# -----------------------------------------------------------------------------
+
+#installed.packages(lib.loc=NULL)
+
+#Installing required packages:
+#popular quant packages
+install.packages("lmtest", lib="C:/Users/kchang.phd2012/Documents/R/sample")
+install.packages("quantmod")
+
+
+install.packages("rJava")
+install.packages("xlsx")
+
+install.packages("data.table")
+install.packages("lubridate")
+install.packages("reshape2")
+install.packages("dyn")
+install.packages("ggplot2")
+
+#Loading required packages
+library(lmtest)
+library(quantmod)
+
+library(rJava)
+library(xlsx)
+
+#convert to data table for structured data
+library(data.table)
+
+#converting data and time
+library(lubridate)
+
+#creating matrics
+library(reshape2)
+
+#time series regressions
+library(dyn)
+
+#plots
+library(ggplot2)
+
+
+
+# -----------------------------------------------------------------------------
+
+
+#Importing Data
+
+
+# for mac: /Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014
+# for windows: C:/Users/kchang.phd2012/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014
+
+Adata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+		     sheetIndex = 1, 
+                 startRow = 1, 
+                 colIndex = NULL, endRow=NULL, header = TRUE )
+Adata2  <- data.frame(Adata)
+#Adata2  <- as.data.table(Adata )
+
+
+
+Adata2[1:5,]
+
+monthly <- Adata2
+
+# removing data: rm(mydata,mydata2)
+
+Bdata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+		     sheetIndex = 2, 
+                 startRow = 1, 
+                 colIndex = NULL, endRow=NULL, header = TRUE )
+Bdata2  <- data.frame(Bdata)
+#Bdata2  <- as.data.table(Bdata )
+
+Bdata2[1:5,]
+
+quarterly <- Bdata2
+
+
+Cdata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+		     sheetIndex = 3, 
+                 startRow = 1, 
+                 colIndex = NULL, endRow=NULL, header = TRUE )
+Cdata2  <- data.frame(Cdata)
+#Cdata2  <- as.data.table(Cdata )
+
+Cdata2[1:5,]
+
+annual <- Cdata2

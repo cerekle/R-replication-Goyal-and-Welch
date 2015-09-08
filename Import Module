@@ -57,7 +57,7 @@ library(ggplot2)
 # for mac: /Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014
 # for windows: C:/Users/kchang.phd2012/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014
 
-Adata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+Adata <- read.xlsx2("C:/Users/kchang.phd2012/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
 		     sheetIndex = 1, 
                  startRow = 1, 
                  colIndex = NULL, endRow=NULL, header = TRUE )
@@ -72,7 +72,7 @@ monthly <- Adata2
 
 # removing data: rm(mydata,mydata2)
 
-Bdata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+Bdata <- read.xlsx2("C:/Users/kchang.phd2012/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
 		     sheetIndex = 2, 
                  startRow = 1, 
                  colIndex = NULL, endRow=NULL, header = TRUE )
@@ -84,7 +84,7 @@ Bdata2[1:5,]
 quarterly <- Bdata2
 
 
-Cdata <- read.xlsx2("/Users/kenchang/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
+Cdata <- read.xlsx2("C:/Users/kchang.phd2012/Google Drive/A. My LBS/Replication of Goyal and Welch/PredictorData2014.xlsx",
 		     sheetIndex = 3, 
                  startRow = 1, 
                  colIndex = NULL, endRow=NULL, header = TRUE )

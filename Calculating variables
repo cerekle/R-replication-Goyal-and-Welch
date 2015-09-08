@@ -1,0 +1,16 @@
+#R for empirical finance, modules:
+#1)Importing data
+#2)Calculating variables for the project
+#3)Statistical tests
+#4)Plotting tables and graphs 
+
+# -----------------------------------------------------------------------------
+
+# Module 2: Calculating variables
+
+
+# adjustments for dates
+# monthly2 <- monthly[,date := ym(yyyymm)]
+
+
+
